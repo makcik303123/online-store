@@ -1,11 +1,26 @@
 .header {
-  background-color: aquamarine;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  margin-right: 48px;
+}
+
+.nav {
+  display: flex;
+}
+
 .list {
   display: flex;
+}
+
+.item {
+  color: #003459;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 48px;
 }
