@@ -1,19 +1,28 @@
-import { useState } from "react";
 import "./App.scss";
-import { Button } from "./ui/button";
+import { Header } from "./components/Header/Header";
+import { Button, ButtonType } from "./ui/button";
 
 function App() {
   return (
-    <>
-      <Button type={"multi"}>
-        <span>Сommunity</span>
-        <span> +</span>
-      </Button>
+    <div className="app">
+      <Header />
+      <div>
+        <Button type={ButtonType.DEFOLT}>
+          <span>Сommunity</span>
+          <span> +</span>
+        </Button>
 
-      <Button type={"single"}>
-        <span>Сommunity</span>
-      </Button>
-    </>
+        <Button type={ButtonType.EMPTY}>
+          <span>Explore Now</span>
+        </Button>
+        <Button type={ButtonType.WHITE}>
+          <span>Explore Now</span>
+        </Button>
+        <Button type={ButtonType.WHITEBORDER}>
+          <span>Explore Now</span>
+        </Button>
+      </div>
+    </div>
   );
 }
 
