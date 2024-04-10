@@ -1,8 +1,12 @@
-import React from "react";
 import styles from "./button.module.scss";
+import { ButtonProps } from "./";
 
-export const Button = ({ children, type }: any) => {
-  const background = type === "multi" ? "1" : "2";
+export const Button = ({ children, type, handlerClick }: ButtonProps) => {
+  const className = styles.button + ` ${styles[type]}`;
 
-  return <button className={styles.button}>{children}</button>;
+  return (
+    <button onClick={handlerClick} className={className}>
+      {children}
+    </button>
+  );
 };

@@ -1,22 +1,29 @@
-import "./App.scss";
-import CardContainer from "./ui/cardContainer/cardContainer.tsx";
-
-// import { Button } from "./ui/button";
+import { Header } from "./components/Header/Header";
+import { Button, ButtonType } from "./ui/button";
 
 function App() {
-    return (
-        <>
-            {/*<Button type={"multi"}>*/}
-            {/*  <span>Сommunity</span>*/}
-            {/*  <span> +</span>*/}
-            {/*</Button>*/}
+  return (
+    <div className="app">
+      <Header />
+      <div>
+        <Button type={ButtonType.DEFOLT}>
+          <span>Сommunity</span>
+          <span> +</span>
+        </Button>
 
-            {/*<Button type={"single"}>*/}
-            {/*  <span>Сommunity</span>*/}
-            {/*</Button>*/}
-            <CardContainer/>
-        </>
-    );
+        <Button type={ButtonType.EMPTY}>
+          <span>Explore Now</span>
+        </Button>
+        <Button type={ButtonType.WHITE}>
+          <span>Explore Now</span>
+        </Button>
+        <Button type={ButtonType.WHITEBORDER}>
+          <span>Explore Now</span>
+        </Button>
+      </div>
+    </div>
+  );
+
 }
 
 export default App;
