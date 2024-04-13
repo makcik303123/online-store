@@ -1,6 +1,7 @@
 import "./App.scss";
 import { Header } from "./components/Header/Header";
 import { Button, ButtonType } from "./ui/button";
+import { sectionHead } from "./ui/sectionHead/sectionHead";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <span>Explore Now</span>
         </Button>
       </div>
+
+      <sectionHead title="123" subTitle="123" />
     </div>
   );
 }
