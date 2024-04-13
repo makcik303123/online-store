@@ -1,7 +1,6 @@
 import "./App.scss";
-import { Header } from "./components/Header/Header";
-import { Button, ButtonType } from "./ui/button";
-import { sectionHead } from "./ui/sectionHead/sectionHead";
+import {Header} from "./components/Header/Header";
+import {Button, ButtonType} from "./ui/button";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
         </Button>
       </div>
 
-      <sectionHead title="123" subTitle="123" />
     </div>
   );
 }

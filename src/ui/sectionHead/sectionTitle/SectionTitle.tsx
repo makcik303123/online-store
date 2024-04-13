@@ -4,6 +4,6 @@ interface SectionTitleProps {
   children: string;
 }
 
-export const sectionTitle = ({ children }: SectionTitleProps) => {
+export const SectionTitle = ({ children }: SectionTitleProps) => {
   return <h2 className={style.title}>{children}</h2>;
 };
