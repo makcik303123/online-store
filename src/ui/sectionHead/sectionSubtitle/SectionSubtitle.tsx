@@ -1,4 +1,4 @@
-import style from './sectionSubtitle.module.scss'
+import style from "./sectionSubtitle.module.scss";
 
 interface SectionSubtitleProps {
   children: string;
