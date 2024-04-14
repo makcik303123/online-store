@@ -1,13 +1,26 @@
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: local("SVN-Gilroy"), url("./fonts//SVNGilroy\ Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: local("SVN-Gilroy"), url("./fonts/SVNGilroy\ Light.woff") format("woff");
+  font-weight: lighter;
+}
+
 body {
   height: 100%;
   line-height: 1.5;
-  font-family: SVN-Gilroy, sans-serif;
+  font-family: "SVN-Gilroy", sans-serif;
 }
 
 * {
   padding: 0px;
   margin: 0px;
   border: none;
+  box-sizing: border-box;
 }
 
 *,
