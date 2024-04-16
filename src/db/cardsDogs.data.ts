@@ -1,11 +1,11 @@
-import dog8 from "./../assets/card/dog8.png";
-import dog1 from "./../assets/card/dog1.png";
-import dog2 from "./../assets/card/dog2.png";
-import dog3 from "./../assets/card/dog3.png";
-import dog4 from "./../assets/card/dog4.png";
-import dog5 from "./../assets/card/dog5.png";
-import dog6 from "./../assets/card/dog6.png";
-import dog7 from "./../assets/card/dog7.png";
+import dog8 from "../assets/Card/dog8.png";
+import dog1 from "../assets/Card/dog1.png";
+import dog2 from "../assets/Card/dog2.png";
+import dog3 from "../assets/Card/dog3.png";
+import dog4 from "../assets/Card/dog4.png";
+import dog5 from "../assets/Card/dog5.png";
+import dog6 from "../assets/Card/dog6.png";
+import dog7 from "../assets/Card/dog7.png";
 import { ICard } from "./cardsProducts.data.ts";
 
 export interface dogInfoType {

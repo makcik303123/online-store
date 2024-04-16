@@ -1,11 +1,12 @@
-import warmNest from './../assets/card/WarmNest.png'
-import zealanda from "./../assets/card/zealanda.png";
-import reflex from "./../assets/card/reflex.png";
-import omegaGold from "./../assets/card/omegaGold.png";
-import cowBoy from "./../assets/card/cowboy.png";
-import ropeBall from "./../assets/card/roleBall.png";
-import headBand from "./../assets/card/headband.png";
-import petToy from "./../assets/card/petToy.png";
+// import warmNest from '../../assets/card/dogs/warm-nest.png'
+import warmNest from "../assets/Card/WarmNest.png";
+import zealanda from "../assets/Card/zealanda.png";
+import reflex from "../assets/Card/reflex.png";
+import omegaGold from "../assets/Card/omegaGold.png";
+import cowBoy from "../assets/Card/cowboy.png";
+import ropeBall from "../assets/Card/roleBall.png";
+import headBand from "../assets/Card/headband.png";
+import petToy from "../assets/Card/petToy.png";
 import { dogInfoType } from "./cardsDogs.data.ts";
 
 export interface ICard {
