@@ -1,7 +1,7 @@
 import styles from "../Card/Card.module.scss";
 import { CardInfo } from "../../ui/cardInfo/CardInfo.tsx";
 import { ICard } from "../../db/cardsProducts.data.ts";
-import present from "../../assets/Card/present.svg";
+import present from "../../assets/./Card/present.svg";
 
 interface CardProps {
 	data: ICard;

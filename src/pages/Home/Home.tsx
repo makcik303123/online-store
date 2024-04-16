@@ -70,12 +70,7 @@ export const Home = () => {
                 </section>
             </div>
 
-
-            <div className={styles.footer}>
-                    <Footer/>
-            </div>
-
-
+            <Footer/>
         </>
     );
 };

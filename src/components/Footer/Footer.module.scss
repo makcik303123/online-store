@@ -1,3 +1,9 @@
+.footer__wrapper {
+  width: 100%;
+  background: linear-gradient(103deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+  border-radius: 40px 40px 0 0;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -44,7 +50,4 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 142.857%;
-}
-
-.footer__image {
 }

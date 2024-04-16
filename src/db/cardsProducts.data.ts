@@ -1,8 +1,8 @@
-// import warmNest from '../../assets/card/dogs/warm-nest.png'
-import warmNest from "../assets/Card/WarmNest.png";
+// import warmNest from '../../assets/Card/dogs/warm-nest.png'
+import warmNest from "../assets/./Card/WarmNest.png";
 import zealanda from "../assets/Card/zealanda.png";
-import reflex from "../assets/Card/reflex.png";
-import omegaGold from "../assets/Card/omegaGold.png";
+import reflex from "../assets/./Card/reflex.png";
+import omegaGold from "../assets/./Card/omegaGold.png";
 import cowBoy from "../assets/Card/cowboy.png";
 import ropeBall from "../assets/Card/roleBall.png";
 import headBand from "../assets/Card/headband.png";
