@@ -1,0 +1,6 @@
+.cards__field {
+	display: grid;
+	grid-template-columns: repeat(4, 280px);
+	grid-auto-rows: minmax(100px, auto);
+	gap: 20px;
+}

@@ -1,16 +1,23 @@
-.preview {
-	display: flex;
-	align-items: center;
-	width: 100%;
+.wrapper {
 	background: linear-gradient(
 		103deg,
 		#fceed5 6.43%,
 		#fceed5 78.33%,
 		#ffe7ba 104.24%
 	);
+	width: 100%;
+	margin-bottom: 48px;
+}
+
+.preview {
+	display: flex;
+	align-items: center;
+	width: 100%;
+
 	border-radius: 0 0 40px 40px;
 	position: relative;
 	padding-bottom: 100px;
+	margin: 0px;
 }
 
 .preview__body {

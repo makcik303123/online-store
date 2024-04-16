@@ -1,37 +1,37 @@
 .header {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28px 0;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 28px 0;
 }
 
 .logo {
-  margin-right: 48px;
+	margin-right: 48px;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .list {
-  display: flex;
+	display: flex;
 }
 
 .item {
-  color: #003459;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-right: 48px;
+	color: #003459;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-right: 48px;
 }
 
 .aside {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
 }
