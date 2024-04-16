@@ -3,7 +3,7 @@ import logo from "../../assets/Header/logo.svg";
 import { Button } from "../../ui/button";
 import { Search } from "../Search";
 
-const navLinks = ["Home", "Category", "About", "Contact"];
+export const navLinks = ["Home", "Category", "About", "Contact"];
 
 export const Header = () => {
 	return (
