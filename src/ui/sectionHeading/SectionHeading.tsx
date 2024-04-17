@@ -1,11 +1,7 @@
 import styles from "./SectionHeading.module.scss";
 import arrow from "../../assets/home/arrow.svg";
 import { Heading } from "../typography";
-
-interface sectionHeadingProps {
-	title: string;
-	note: string;
-}
+import type { sectionHeadingProps } from "./types";
 
 export const SectionHeading = ({ title, note }: sectionHeadingProps) => {
 	return (

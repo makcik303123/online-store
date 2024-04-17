@@ -2,6 +2,7 @@ import styles from "./Header.module.scss";
 import logo from "../../assets/Header/logo.svg";
 import { Button } from "../../ui/button";
 import { Search } from "../Search";
+import { Link } from "react-router-dom";
 
 export const navLinks = ["Home", "Category", "About", "Contact"];
 
@@ -20,7 +21,9 @@ export const Header = () => {
 
 					<ul className={styles.list}>
 						{navLinks.map((link) => (
-							<li className={styles.item}>{link}</li>
+							<Link to={"/" + link.toLowerCase()}>
+								<li className={styles.item}>{link}</li>
+							</Link>
 						))}
 					</ul>
 				</div>

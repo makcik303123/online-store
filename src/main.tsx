@@ -1,15 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.scss";
 import "./libs/reset.scss";
 import "./libs/vars.scss";
-import {BrowserRouter} from "react-router-dom";
+import { Category, Home } from "./pages/index.ts";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <App />,
+		errorElement: <span style={{ color: "black" }}>Error</span>,
+		children: [
+			{
+				path: "/home",
+				element: <Home />,
+			},
+			{
+				path: "/category",
+				element: <Category />,
+			},
+		],
+	},
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <BrowserRouter>
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>
-    </BrowserRouter>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );

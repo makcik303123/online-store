@@ -6,7 +6,7 @@ interface CardsFieldProps {
 	cards: ICard[];
 }
 
-const CardsField = (props: CardsFieldProps) => {
+export const CardsField = (props: CardsFieldProps) => {
 	return (
 		<div className={styles.cards__field}>
 			{props.cards.map((card, index) => (
@@ -15,5 +15,3 @@ const CardsField = (props: CardsFieldProps) => {
 		</div>
 	);
 };
-
-export default CardsField;

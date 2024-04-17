@@ -1,10 +1,12 @@
 import "./App.scss";
-import { Home } from "./pages/Home/Home";
+import { Footer } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
 	return (
 		<div className="app">
-			<Home />
+			<Outlet />
+			<Footer />
 		</div>
 	);
 }
