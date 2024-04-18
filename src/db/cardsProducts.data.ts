@@ -7,7 +7,7 @@ import cowBoy from "../assets/Card/cowboy.png";
 import ropeBall from "../assets/Card/roleBall.png";
 import headBand from "../assets/Card/headband.png";
 import petToy from "../assets/Card/petToy.png";
-import { dogInfoType } from "./cardsDogs.data.ts";
+import {dogInfoType} from "./cardsDogs.data.ts";
 
 export interface ICard {
 	image: string;
@@ -26,7 +26,7 @@ export const ourProduct: ICard[] = [
 	{
 		image: zealanda,
 		title: "Reflex Plus Adult Cat Food Salmon",
-		cardInfo: { Product: "Dog Food", Size: "385gm" },
+		cardInfo: { Product: "Dogs Food", Size: "385gm" },
 		price: "140.000 VND",
 		promotion: "Free Toy & Free Shaker",
 	},
@@ -54,7 +54,7 @@ export const ourProduct: ICard[] = [
 	{
 		image: omegaGold,
 		title: "NaturVet Dogs - Omega-Gold Plus Salmon Oil",
-		cardInfo: { Product: "Dog Food", Size: "385gm" },
+		cardInfo: { Product: "Dogs Food", Size: "385gm" },
 		price: "350.000 VND",
 		promotion: "Free Toy & Free Shaker",
 	},
