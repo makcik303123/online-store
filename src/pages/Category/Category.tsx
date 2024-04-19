@@ -1,11 +1,11 @@
-import React from "react";
 import styles from "./Category.module.scss";
-import { CardsField, MultiFilter } from "../../components";
+import { CardsField, Header, MultiFilter } from "../../components";
 import { ourDogs } from "../../db";
 
 export const Category = () => {
 	return (
 		<>
+			<Header />
 			<div className="container">
 				<div className={styles.category}>
 					<MultiFilter />

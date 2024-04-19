@@ -6,6 +6,8 @@ import { useMultiFilterState } from "./useMultiFilterState";
 export const MultiFilter = () => {
 	const { params, handlerCheckBox } = useMultiFilterState();
 
+	console.log(params);
+
 	return (
 		<div className={styles.multifilter}>
 			<div className={styles.heading__wrapper}>
