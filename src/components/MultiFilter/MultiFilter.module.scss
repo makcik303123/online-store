@@ -4,6 +4,14 @@
 	display: flex;
 	flex-direction: column;
 	margin-right: 20px;
+
+	@media (max-width: 992px) {
+		min-width: 200px;
+	}
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 }
 
 .heading__wrapper {
