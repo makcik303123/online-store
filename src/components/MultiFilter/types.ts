@@ -1,15 +1,20 @@
+interface MultiFilterProps {
+  openFilter: boolean;
+  setOpenFilter: (state: boolean) => void;
+}
+
 interface Params {
-	[key: string]: boolean;
+  [key: string]: boolean;
 }
 
 interface Filter {
-	header: string;
-	fields: field[];
+  header: string;
+  fields: field[];
 }
 
 interface field {
-	name: string;
-	color: string | null;
+  name: string;
+  color: string | null;
 }
 
-export type { Params, Filter };
+export type { MultiFilterProps, Params, Filter };
