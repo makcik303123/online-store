@@ -4,12 +4,12 @@ import type { ICard } from "../../db/cardsProducts.data.ts";
 
 interface CardsFieldProps {
 	cards: ICard[];
-	filterState?: boolean;
+	fullField?: boolean;
 }
 
-export const CardsField = ({ cards, filterState }: CardsFieldProps) => {
+export const CardsField = ({ cards, fullField }: CardsFieldProps) => {
 	const className =
-		styles.cards__field + (filterState ? ` ${styles.with__filter}` : "");
+		styles.cards__field + (fullField ? ` ${styles.with__filter}` : "");
 
 	return (
 		<div className={className}>

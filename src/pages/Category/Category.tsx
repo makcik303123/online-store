@@ -1,11 +1,20 @@
 import styles from "./Category.module.scss";
 import { CardsField, Header, MultiFilter } from "../../components";
 import { ourDogs } from "../../db";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Heading } from "../../ui";
+import { useWindowSize } from "../../hooks";
 
 export const Category = () => {
-	const [filterState, setFilterState] = useState(true);
+	const windowSize = useWindowSize();
+	const mobileSize = 768;
+
+	const [fullField, setFullField] = useState(windowSize > mobileSize);
+	const [openFilter, setOpenFilter] = useState(false);
+
+	useEffect(() => {
+		setFullField(windowSize > mobileSize);
+	}, [windowSize]);
 
 	return (
 		<>
@@ -13,7 +22,10 @@ export const Category = () => {
 			<div className="container">
 				<section>
 					<div className={styles.category}>
-						<MultiFilter />
+						<MultiFilter
+							openFilter={openFilter}
+							setOpenFilter={setOpenFilter}
+						/>
 						<div className={styles.field}>
 							<div className={styles.field__header}>
 								<div className={styles.header__left}>
@@ -21,7 +33,9 @@ export const Category = () => {
 									<p>52 puppies</p>
 								</div>
 								<div className={styles.header__right}>
-									<button>Filter</button>
+									<button onClick={() => setOpenFilter(!openFilter)}>
+										Filter
+									</button>
 									<select>
 										<option value="">Sort</option>
 										<option value="">Sort</option>
@@ -30,7 +44,7 @@ export const Category = () => {
 									</select>
 								</div>
 							</div>
-							<CardsField cards={ourDogs} filterState={filterState} />
+							<CardsField cards={ourDogs} fullField={fullField} />
 						</div>
 					</div>
 				</section>
