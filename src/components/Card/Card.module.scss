@@ -1,6 +1,6 @@
 .card {
 	max-width: 280px;
-	width: 100%;
+	min-width: 100%;
 	padding: 8px 8px 0 8px;
 	text-align: start;
 	height: 100%;
@@ -23,6 +23,14 @@
 	flex: 1 1 auto;
 	width: 100%;
 	padding: 8px 8px 20px 8px;
+}
+
+.image__wrapper {
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
 }
 
 .image {
@@ -61,6 +69,8 @@
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 142.857%;
+	white-space: nowrap;
+	overflow: hidden;
 
 	&__dot {
 		margin: 10px 8px;

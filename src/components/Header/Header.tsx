@@ -21,7 +21,7 @@ export const Header = () => {
 
 					<ul className={styles.list}>
 						{navLinks.map((link) => (
-							<Link to={"/" + link.toLowerCase()}>
+							<Link key={link} to={"/" + link.toLowerCase()}>
 								<li className={styles.item}>{link}</li>
 							</Link>
 						))}

@@ -11,14 +11,14 @@ export const Footer = () => {
 				<div className={styles.footer__links}>
 					<ul className={styles.nav__links}>
 						{navLinks.map((navLink) => (
-							<Link to={navLink.toLowerCase()}>
+							<Link key={navLink} to={navLink.toLowerCase()}>
 								<li>{navLink}</li>
 							</Link>
 						))}
 					</ul>
 					<ul className={styles.external__links}>
 						{externalLinks.map((ext) => (
-							<Link to={ext.link} target="_blank">
+							<Link key={ext.image} to={ext.link} target="_blank">
 								<img src={ext.image} alt="image-link" />
 							</Link>
 						))}

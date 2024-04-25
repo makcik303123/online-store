@@ -4,12 +4,16 @@ import type { ICard } from "../../db/cardsProducts.data.ts";
 
 interface CardsFieldProps {
 	cards: ICard[];
+	fullField?: boolean;
 }
 
-export const CardsField = (props: CardsFieldProps) => {
+export const CardsField = ({ cards, fullField }: CardsFieldProps) => {
+	const className =
+		styles.cards__field + (fullField ? ` ${styles.with__filter}` : "");
+
 	return (
-		<div className={styles.cards__field}>
-			{props.cards.map((card, index) => (
+		<div className={className}>
+			{cards.map((card, index) => (
 				<Card key={index} data={card} />
 			))}
 		</div>
