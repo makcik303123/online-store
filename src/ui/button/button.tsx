@@ -1,5 +1,5 @@
 import styles from "./button.module.scss";
-import {ButtonProps} from "./";
+import {ButtonProps} from "./types.ts";
 
 export const Button = ({children, type, handlerClick}: ButtonProps) => {
     const className = styles.button + ` ${styles[type]}`;

@@ -1,0 +1,88 @@
+.dog__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #EBEEEF;
+  background: #FDFDFD;
+}
+
+.slider {
+  width: 560px;
+  height: 580px;
+  border: 1px solid black;
+}
+
+.dog__info {
+  max-width: 517px;
+  width: 100%;
+}
+
+.dog__ {
+  &sku {
+    color: #99A2A5;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.857%;
+    margin-bottom: 2px;
+  }
+
+  &name {
+    color: #00171F;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 6px;
+  }
+
+  &price {
+    color: #002A48;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+    margin-bottom: 18px;
+  }
+
+
+}
+
+.dog__path__link {
+  margin-bottom: 20px;
+}
+
+.button__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.dog__table {
+  max-width: 517px;
+  width: 100%;
+  padding: 8px 0;
+
+  &_row {
+    display: flex;
+    border-bottom: 1px solid #EBEEEF;
+    color: #667479;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
+
+  &_field {
+    max-width: 194px;
+    width: 100%;
+    padding: 4px 11px 2px 11px;
+    align-items: center;
+  }
+
+  &_value {
+    display: flex;
+    padding: 4px 11px 2px 11px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+  }
+}
