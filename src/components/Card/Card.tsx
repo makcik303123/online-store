@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 
 interface CardProps {
 	data: ICard;
+	cardId: number;
 }
 
 export const Card = (props: CardProps) => {
 	return (
-		<Link to={`/${props.data.title}`}>
+		<Link to={`/category/${props.cardId + 1}`}>
 			<div className={styles.card}>
-				<div className={styles.image__wrapper}>
-					<img className={styles.image} src={props.data.image} alt="image" />
-				</div>
+				<img className={styles.image} src={props.data.image} alt="image" />
+
 				<div className={styles.cardBody}>
 					<p className={styles.title}>{props.data.title}</p>
 					<div>

@@ -1,0 +1,63 @@
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Navigation, Thumbs, FreeMode } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import "./swiper.scss";
+
+// type SwiperRef = {
+// 	swiper: typeof Swiper;
+// };
+
+import { ourDogs } from "../../db/cardsDogs.data.ts";
+import { useState } from "react";
+import { JSX } from "react/jsx-runtime";
+
+export const DogSwiper = () => {
+	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperRef | null>(null);
+
+	const slides: JSX.Element[] = [];
+
+	ourDogs.map((slide, index) => {
+		slides.push(
+			<SwiperSlide key={index}>
+				<img src={slide.image} alt="image" />
+			</SwiperSlide>
+		);
+	});
+
+	return (
+		<>
+			<Swiper
+				style={{
+					color: "#fff",
+					backgroundColor: "#fff",
+				}}
+				spaceBetween={10}
+				navigation={true}
+				thumbs={thumbsSwiper ? { swiper: thumbsSwiper.swiper } : undefined}
+				modules={[FreeMode, Navigation, Thumbs]}
+				className="mySwiper2"
+			>
+				{slides}
+			</Swiper>
+			<Swiper
+				onSwiper={(swiper) => {
+					setThumbsSwiper((prevState: SwiperRef | null) => ({
+						...prevState,
+						swiper,
+					}));
+				}}
+				spaceBetween={10}
+				slidesPerView={4}
+				freeMode={true}
+				watchSlidesProgress={true}
+				modules={[FreeMode, Navigation, Thumbs]}
+				className="mySwiper"
+			>
+				{slides}
+			</Swiper>
+		</>
+	);
+};
