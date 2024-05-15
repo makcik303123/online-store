@@ -1,76 +1,87 @@
 import styles from "./Home.module.scss";
 import img from "../../assets/home/Frame 146.png";
-import {CardsField, Header} from "../../components";
-import {Button, SectionHeading} from "../../ui";
-import {ourDogs, ourProduct} from "../../db";
+import { CardsField, Header } from "../../components";
+import { Button, SectionHeading } from "../../ui";
+import { ourDogs, ourProduct } from "../../db";
 import Play from "../../assets/button/icon_play.svg";
+import video from "../../assets/home/video.mp4";
 
 const sections = [
-    {
-        title: "Take A look At Some Of Our Pets",
-        note: "What new?",
-        button: {
-            text: "View more",
-            link: "/dogs",
-        },
-        content: <CardsField cards={ourDogs}/>,
-    },
-    {
-        title: "Our Products",
-        note: "Hard to choose right products for your pets?",
-        button: {
-            text: "View more",
-            link: "#",
-        },
-        content: <CardsField cards={ourProduct}/>,
-    },
+	{
+		title: "Take A look At Some Of Our Pets",
+		note: "What new?",
+		button: {
+			text: "View more",
+			link: "/dogs",
+		},
+		content: <CardsField cards={ourDogs} />,
+	},
+	{
+		title: "Our Products",
+		note: "Hard to choose right products for your pets?",
+		button: {
+			text: "View more",
+			link: "#",
+		},
+		content: <CardsField cards={ourProduct} />,
+	},
 ];
 
 export const Home = () => {
-    return (
-        <>
-            <div className={styles.wrapper}>
-                <Header/>
+	return (
+		<>
+			<div className={styles.wrapper}>
+				<Header />
+				<div className={styles.wrapper__video}>
+					<video className={styles.video_block} autoPlay loop muted playsInline>
+						<source src={video} type="video/mp4" />
+					</video>
+					<video className={styles.video_block} autoPlay loop muted playsInline>
+						<source src={video} type="video/mp4" />
+					</video>
+					<video className={styles.video_block} autoPlay loop muted playsInline>
+						<source src={video} type="video/mp4" />
+					</video>
+				</div>
+				<section className={styles.preview}>
+					<div className="container">
+						<div className={styles.preview__body}>
+							<div className={styles.preview__left}>
+								<div className={styles.left__title}>One more friend</div>
+								<div className={styles.left__subtitle}>Thousands more fun!</div>
+								<p className={styles.left__text}>
+									Having a pet means you have more joy, a new friend, a happy
+									person who will always be with you to have fun. We have 200+
+									different pets that can meet your needs!
+								</p>
+								<div>
+									<Button type={"default"}> Hello</Button>
+									<Button type={"empty"}>
+										<span>Hello</span>
+										<img src={Play} alt="play" />
+									</Button>
+								</div>
+							</div>
+							<div className={styles.preview__right}>
+								<img src={img} alt="img" />
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
-                <section className={styles.preview}>
-                    <div className="container">
-                        <div className={styles.preview__body}>
-                            <div className={styles.preview__left}>
-                                <div className={styles.left__title}>One more friend</div>
-                                <div className={styles.left__subtitle}>Thousands more fun!</div>
-                                <p className={styles.left__text}>
-                                    Having a pet means you have more joy, a new friend, a happy
-                                    person who will always be with you to have fun. We have 200+
-                                    different pets that can meet your needs!
-                                </p>
-                                <div>
-                                    <Button type={"default"}> Hello</Button>
-                                    <Button type={"empty"}>
-                                        <span>Hello</span>
-                                        <img src={Play} alt="play"/>
-                                    </Button>
-                                </div>
-                            </div>
-                            <div className={styles.preview__right}>
-                                <img src={img} alt="img"/>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div className="container">
-                {sections.map((section) => (
-                    <section>
-                        <SectionHeading
-                            title={section.title}
-                            note={section.note}
-                            button={section.button}
-                        />
-                        {section.content}
-                    </section>
-                ))}
-            </div>
-        </>
-    );
+			<div className="container">
+				{sections.map((section) => (
+					<section>
+						<SectionHeading
+							title={section.title}
+							note={section.note}
+							button={section.button}
+						/>
+						{section.content}
+					</section>
+				))}
+			</div>
+		</>
+	);
 };
