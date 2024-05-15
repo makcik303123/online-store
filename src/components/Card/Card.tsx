@@ -13,7 +13,9 @@ export const Card = (props: CardProps) => {
 	return (
 		<Link to={`/category/${props.cardId + 1}`}>
 			<div className={styles.card}>
-				<img className={styles.image} src={props.data.image} alt="image" />
+				<div className={styles.image__wrapper}>
+					<img className={styles.image} src={props.data.image} alt="image" />
+				</div>
 
 				<div className={styles.cardBody}>
 					<p className={styles.title}>{props.data.title}</p>

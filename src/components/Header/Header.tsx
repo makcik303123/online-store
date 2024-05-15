@@ -1,6 +1,5 @@
 import styles from "./Header.module.scss";
 import logo from "../../assets/Header/logo.svg";
-import { Button } from "../../ui/button";
 import { Search } from "../Search";
 import { Link } from "react-router-dom";
 
@@ -34,11 +33,6 @@ export const Header = () => {
 						<span>Join the community</span>
 					</Button> */}
 					{/* <div
-						style={{
-							color: "rgb(53 33 85)",
-							fontSize: "20px",
-							fontWeight: "bold",
-						}}
 					>
 						VND ^
 					</div> */}
