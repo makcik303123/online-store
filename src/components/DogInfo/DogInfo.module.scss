@@ -1,0 +1,80 @@
+.dog__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border-radius: 20px;
+	border: 1px solid #ebeeef;
+	background: #fdfdfd;
+}
+
+.slider {
+	width: 50%;
+	height: auto;
+	margin-right: 34px;
+}
+
+.dog__info {
+	max-width: 517px;
+	width: 100%;
+}
+
+.dog__ {
+	&sku {
+		color: #99a2a5;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 142.857%;
+		margin-bottom: 2px;
+	}
+
+	&price {
+		color: #002a48;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 160%;
+		margin-bottom: 18px;
+	}
+}
+
+.dog__path__link {
+	margin-bottom: 20px;
+}
+
+.button__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin-bottom: 18px;
+}
+
+.dog__table {
+	width: 100%;
+	padding: 8px 0;
+	display: flex;
+	flex-direction: column;
+
+	&_row {
+		padding: 8px 0;
+		display: flex;
+		border-bottom: 1px solid #ebeeef;
+		color: #667479;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 142.857%;
+	}
+
+	&_field {
+		max-width: 194px;
+		width: 100%;
+		padding: 4px 11px 2px 11px;
+		align-items: center;
+	}
+
+	&_value {
+		display: flex;
+		padding: 4px 11px 2px 11px;
+		align-items: flex-start;
+		gap: 10px;
+		flex: 1 0 0;
+	}
+}

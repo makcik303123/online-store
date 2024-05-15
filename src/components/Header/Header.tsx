@@ -4,7 +4,7 @@ import { Button } from "../../ui/button";
 import { Search } from "../Search";
 import { Link } from "react-router-dom";
 
-export const navLinks = ["Home", "Category", "About", "Contact"];
+export const navLinks = ["Home", "Category", "About", "Contact", "Culculator"];
 
 export const Header = () => {
 	return (
@@ -30,10 +30,10 @@ export const Header = () => {
 
 				<div className={styles.aside}>
 					<Search placeHolder={"Search"} />
-					<Button type={"default"}>
+					{/* <Button type={"default"}>
 						<span>Join the community</span>
-					</Button>
-					<div
+					</Button> */}
+					{/* <div
 						style={{
 							color: "rgb(53 33 85)",
 							fontSize: "20px",
@@ -41,7 +41,7 @@ export const Header = () => {
 						}}
 					>
 						VND ^
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

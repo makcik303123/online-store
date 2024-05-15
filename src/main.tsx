@@ -5,12 +5,12 @@ import App from "./App.tsx";
 import "./index.scss";
 import "./libs/reset.scss";
 import "./libs/vars.scss";
-import {Category, Dogs, Home} from "./pages/index.ts";
+import {Category, Dog, Home} from "./pages/index.ts";
 
 const PATH = {
     HOME: '/home',
     CATEGORY: '/category',
-    DOG: '/dogs'
+    DOG: '/category/:dogId'
 } as const
 
 const router = createBrowserRouter([
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: PATH.DOG,
-                element: <Dogs/>,
+                element: <Dog/>,
             },
         ],
     },
