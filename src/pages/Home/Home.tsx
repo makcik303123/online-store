@@ -1,5 +1,5 @@
 import styles from "./Home.module.scss";
-import img from "../../assets/home/Frame 146.png";
+// import img from "../../assets/home/Frame 146.png";
 import { CardsField, Header } from "../../components";
 import { Button, SectionHeading } from "../../ui";
 import { ourDogs, ourProduct } from "../../db";
@@ -63,7 +63,7 @@ export const Home = () => {
 								</div>
 							</div>
 							<div className={styles.preview__right}>
-								<img src={img} alt="img" />
+								{/* <img src={img} alt="img" /> */}
 							</div>
 						</div>
 					</div>
