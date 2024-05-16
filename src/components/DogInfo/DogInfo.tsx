@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ourDogs } from "../../db";
 import styles from "./DogInfo.module.scss";
 import { Button, Heading } from "../../ui";
@@ -7,12 +7,6 @@ import { DogSwiper } from "../Swiper/Swiper.tsx";
 
 export const DogInfo = () => {
 	const { dogId } = useParams<{ dogId: string }>();
-
-	// console.log(dogId);
-
-	const location = useLocation();
-
-	// console.log(location.pathname.split("/"));
 
 	const currentDog = ourDogs[+dogId! - 1];
 	const dogName = currentDog.title.split(" ").slice(2).join(" ");
