@@ -9,17 +9,22 @@ interface CardInfoProps {
 export const CardInfo = (props: CardInfoProps) => {
 	const cardInfo = Object.entries(props.info);
 
+	console.log(cardInfo);
+
 	return (
 		<div className={styles.cardInfoContainer}>
 			{cardInfo.map((p, index) => {
-				const classDot = index % 2 === 1 ? styles.dot : "";
+				const isDot = (index + 1) % 2 === 0;
 				const [name, value] = p;
 
 				return (
-					<p key={index} className={classDot}>
-						<span className={styles.name}>{name}: </span>
-						<span className={styles.value}>{value}</span>
-					</p>
+					<div key={index} className={styles.wrapper__info}>
+						{isDot && <span className={styles.dot}></span>}
+						<p>
+							<span className={styles.name}>{name}: </span>
+							<span className={styles.value}>{value}</span>
+						</p>
+					</div>
 				);
 			})}
 		</div>

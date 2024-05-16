@@ -12,7 +12,7 @@ const sections = [
 		note: "What new?",
 		button: {
 			text: "View more",
-			link: "/dogs",
+			link: "category",
 		},
 		content: <CardsField cards={ourDogs} />,
 	},
@@ -21,7 +21,7 @@ const sections = [
 		note: "Hard to choose right products for your pets?",
 		button: {
 			text: "View more",
-			link: "#",
+			link: "category",
 		},
 		content: <CardsField cards={ourProduct} />,
 	},
@@ -33,15 +33,17 @@ export const Home = () => {
 			<div className={styles.wrapper}>
 				<Header />
 				<div className={styles.wrapper__video}>
-					<video className={styles.video_block} autoPlay loop muted playsInline>
-						<source src={video} type="video/mp4" />
-					</video>
-					<video className={styles.video_block} autoPlay loop muted playsInline>
-						<source src={video} type="video/mp4" />
-					</video>
-					<video className={styles.video_block} autoPlay loop muted playsInline>
-						<source src={video} type="video/mp4" />
-					</video>
+					{[1, 2, 3].map(() => (
+						<video
+							className={styles.video_block}
+							autoPlay
+							loop
+							muted
+							playsInline
+						>
+							<source src={video} type="video/mp4" />
+						</video>
+					))}
 				</div>
 				<section className={styles.preview}>
 					<div className="container">

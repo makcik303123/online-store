@@ -1,7 +1,8 @@
 .cardInfoContainer {
 	display: flex;
-	gap: 26px;
 	margin-bottom: 4px;
+	flex-wrap: wrap;
+	overflow: hidden;
 
 	p {
 		white-space: nowrap;
@@ -22,17 +23,20 @@
 	line-height: 150%;
 }
 
-.dot {
+.wrapper__info {
 	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 22px;
+}
 
-	&:before {
-		content: "";
-		position: absolute;
-		left: -15px;
-		top: 10px;
-		width: 4px;
-		height: 4px;
-		background: rgba(102, 116, 121, 1);
-		border-radius: 50%;
-	}
+.dot {
+	position: absolute;
+	left: -13px;
+	display: block;
+	margin-top: 5px;
+	width: 4px;
+	height: 4px;
+	background: rgba(102, 116, 121, 1);
+	border-radius: 50%;
 }
