@@ -1,5 +1,5 @@
 import styles from "./Footer.module.scss";
-import { navLinks } from "../Header/Header.tsx";
+import { navLinks } from "../Navigation/";
 import { externalLinks } from "./externalLinks.ts";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Header/logo.svg";

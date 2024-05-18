@@ -9,8 +9,6 @@ interface CardInfoProps {
 export const CardInfo = (props: CardInfoProps) => {
 	const cardInfo = Object.entries(props.info);
 
-	console.log(cardInfo);
-
 	return (
 		<div className={styles.cardInfoContainer}>
 			{cardInfo.map((p, index) => {
