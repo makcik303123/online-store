@@ -3,7 +3,7 @@ import { CardsField, Header, MultiFilter } from "../../components";
 import { ourDogs } from "../../db";
 import { useEffect, useState } from "react";
 import { Heading } from "../../ui";
-import { useWindowSize } from "../../hooks";
+import { useBodyLock, useWindowSize } from "../../hooks";
 // // @ts-ignore
 // import { Lib } from "./Lib.jsx";
 // // @ts-ignore
@@ -16,11 +16,12 @@ export const Category = () => {
 	const mobileSize = 768;
 
 	const [fullField, setFullField] = useState(windowSize > mobileSize);
-	const [openFilter, setOpenFilter] = useState(false);
 
 	useEffect(() => {
 		setFullField(windowSize > mobileSize);
 	}, [windowSize]);
+
+	const [openFilter, setOpenFilter] = useBodyLock();
 
 	return (
 		<>

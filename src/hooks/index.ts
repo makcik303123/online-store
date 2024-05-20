@@ -1,4 +1,5 @@
 import { useWindowSize } from "./useWindowSize";
 import { useDebounce } from "./useDebounce";
+import { useBodyLock } from "./useBodyLock";
 
-export { useWindowSize, useDebounce };
+export { useWindowSize, useDebounce, useBodyLock };

@@ -1,23 +1,11 @@
-import { useState, useEffect } from "react";
 import styles from "./Navigation.module.scss";
 import { Link } from "react-router-dom";
+import { useBodyLock } from "../../hooks";
 
 export const navLinks = ["Home", "Category", "About", "Contact", "Culculator"];
 
 export const Navigation = () => {
-	const [isActive, setisActive] = useState(false);
-
-	useEffect(() => {
-		if (isActive) {
-			document.body.classList.add("lock");
-		} else {
-			document.body.classList.remove("lock");
-		}
-
-		return () => {
-			document.body.classList.remove("lock");
-		};
-	}, [isActive]);
+	const [isActive, setIsActive] = useBodyLock();
 
 	return (
 		<>
@@ -27,7 +15,7 @@ export const Navigation = () => {
 						<Link
 							key={link}
 							to={"/" + link.toLowerCase()}
-							onClick={() => setisActive(false)}
+							onClick={() => setIsActive(false)}
 						>
 							<li className={styles.item}>{link}</li>
 						</Link>
@@ -35,7 +23,7 @@ export const Navigation = () => {
 				</ul>
 			</nav>
 			<div
-				onClick={() => setisActive(!isActive)}
+				onClick={() => setIsActive(!isActive)}
 				className={styles.wrapper__burger}
 				data-active={isActive}
 			>
