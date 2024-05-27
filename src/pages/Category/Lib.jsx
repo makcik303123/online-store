@@ -1,20 +1,11 @@
-import AnimatedNumber from "animated-number-react";
+import {useSpring, animated} from "@react-spring/web";
 
-import React from "react";
-
-export const Lib = (
-  state = {
-    value: 150,
-  },
-  handleChange = ({ target: { value } }) => {
-    setState({ value });
-  },
-  formatValue = (value) => value.toFixed(2)
-) => {
-  return (
-    <div>
-      <input type="number" onChange={handleChange} value={state.value} />
-      <AnimatedNumber value={state.value} formatValue={formatValue} />
-    </div>
-  );
+export const Number = ({n, duration}) => {
+    const {number} = useSpring({
+        from: {number: 0},
+        number: n,
+        delay: 200,
+        config: {mass: 1, tension: 20, friction: 10, duration},
+    })
+    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
 };
