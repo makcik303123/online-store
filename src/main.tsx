@@ -10,11 +10,12 @@ import App from "./App.tsx";
 import "./index.scss";
 import "./libs/reset.scss";
 import "./libs/vars.scss";
-import { Category, Dog, Home } from "./pages/index.ts";
+import { About, Category, Dog, Home } from "./pages/index.ts";
 
 const PATH = {
 	HOME: "/home",
 	CATEGORY: "/category",
+	ABOUT: "/about",
 	DOG: "/category/:dogId",
 } as const;
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
 			{
 				path: PATH.CATEGORY,
 				element: <Category />,
+			},
+			{
+				path: PATH.ABOUT,
+				element: <About />,
 			},
 			{
 				path: PATH.DOG,
