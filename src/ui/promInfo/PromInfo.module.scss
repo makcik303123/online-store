@@ -44,25 +44,6 @@
 				}
 			}
 
-			.content__title {
-				font-weight: 700;
-				font-size: 32px;
-				line-height: 61px;
-				color: #ed0644;
-
-				@media (max-width: 1199.98px) and (min-width: 992px) {
-					font-size: 32px;
-				}
-				@media (max-width: 767.98px) {
-					font-size: 24px;
-					line-height: 110%;
-				}
-				@media (max-width: 575.98px) {
-					font-size: 20px;
-					line-height: 110%;
-				}
-			}
-
 			.content__rectangle {
 				position: absolute;
 				right: 0;
