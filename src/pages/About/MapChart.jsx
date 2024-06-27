@@ -27,23 +27,33 @@ const markers = [
 	{ markerOffset: 15, name: "Lima", coordinates: [-77.0428, -12.0464] },
 ];
 
-console.log(ComposableMap, " map");
-console.log(Geographies, " Geographies");
-console.log(Geography, " Geography");
-
 const MapChart = () => {
 	const [activeName, setActiveName] = React.useState(
 		markers.map((marker) => marker.name)
 	);
 
-	console.log(activeName);
+	let timer;
+
+	const markHandler = (name) => {
+		clearTimeout(timer);
+
+		if (name !== activeName) {
+			setActiveName(name);
+		}
+
+		console.log("work");
+		timer = setTimeout(() => {
+			setActiveName(null);
+			console.log("delete");
+		}, 3000);
+	};
 
 	return (
 		<ComposableMap
 			// projection="geoAzimuthalEqualArea"
 			projectionConfig={{
-				rotate: [-10, 0, 0],
-				scale: 250,
+				rotate: [-20, 0, 0],
+				scale: 190,
 			}}
 		>
 			<Geographies geography={"./features.json"}>
@@ -83,7 +93,7 @@ const MapChart = () => {
 				<Marker
 					key={name}
 					coordinates={coordinates}
-					onMouseEnter={() => setActiveName(name)}
+					onMouseEnter={() => markHandler(name)}
 				>
 					{activeName === name ? (
 						<text
@@ -92,19 +102,20 @@ const MapChart = () => {
 							style={{
 								fontFamily: "system-ui",
 								fill: "#5D5A6D",
-								// opacity: activeName === name ? 1 : 0,
-								transition: "opacity 0.5s",
-								position: "relative",
-								zIndex: 1,
+								animation: "fadeIn 0.5s",
+								userSelect: "none",
 							}}
 						>
 							{name}
 						</text>
 					) : (
 						<g
+							style={{
+								animation: "fadeIn 1s",
+							}}
 							fill="none"
 							stroke="#FF5533"
-							strokeWidth="2"
+							strokeWidth="1.3"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 							transform="translate(-12, -24)"
