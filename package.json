@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "@reduxjs/toolkit": "^2.2.3",
     "animated-number-react": "^0.1.2",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.10.3",
     "react-router-dom": "^6.22.3",
     "react-simple-maps": "^3.0.0",
     "sass": "^1.74.1",

@@ -56,7 +56,7 @@ export const Home = () => {
 									person who will always be with you to have fun. We have 200+
 									different pets that can meet your needs!
 								</p>
-								<div>
+								<div className={styles.button__wrapper}>
 									<Button type={"default"}> Hello</Button>
 									<Button type={"empty"}>
 										<span>Hello</span>

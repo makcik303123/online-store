@@ -4,10 +4,6 @@ import { ourDogs } from "../../db";
 import { useEffect, useState } from "react";
 import { Heading } from "../../ui";
 import { useBodyLock, useWindowSize } from "../../hooks";
-// // @ts-ignore
-// import { Lib } from "./Lib.jsx";
-// // @ts-ignore
-// import { MapChart } from "./MapChart.jsx";
 
 const options = ["popular", "order", "date"];
 
@@ -27,10 +23,6 @@ export const Category = () => {
 		<>
 			<Header />
 			<div className="container">
-				{/* <section>
-          <Lib />
-          <MapChart />
-        </section> */}
 				<section>
 					<div className={styles.category}>
 						<MultiFilter
